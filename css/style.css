@@ -1,0 +1,146 @@
+.home-page{
+    width: 1912px;
+    margin: 0 auto;
+}
+
+/*header开始*/
+.header{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 99;
+    left: 50%;
+    margin-left: -956px;
+    width: 1912px;
+    height: 65px;
+    background-color: rgba(0,0,0,0.8);
+}
+.header a{
+    display: flex;
+    align-items: center;
+    height: 65px;
+    font-size: 14px;
+}
+.header a:hover{
+    color: #ff6900;
+}
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    width: 1226px;
+    height: 65px;
+}
+.header-content-left{
+    display: flex;
+    align-items: center;
+    width: 60px;
+    height: 65px;
+}
+.header-content-left .header-logo{
+    width: 34px;
+    height: 34px;
+    cursor: pointer;
+}
+.header-content-mid{
+    display: flex;
+    justify-content: space-between;
+    width: 940px;
+    height: 65px;
+}
+.header-content-right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 101px;
+    height: 65px;
+}
+.header-content-right span{
+    color: white;
+}
+/*header结束*/
+
+/*content开始*/
+.content{
+    width: 100%;
+    margin: 0 auto;
+}
+.content>div{
+    margin-bottom: 10px;
+}
+.content .img-box{
+    position: relative;
+    left: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: all .5s linear;
+}
+.img-box img{
+    width: 1912px;
+}
+.content-second{
+    position: relative;
+    overflow: hidden;
+}
+.content-second>a:hover{
+    color: #ff6900;
+}
+.swiper-pagination>span:first-child{
+    background-color: #ff6900;
+}
+.i-btn-left{
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    font-size: 40px;
+}
+.i-btn-right{
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    font-size: 40px;
+}
+.swiper-pagination{
+    position: absolute;
+    bottom: 80px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.swiper-pagination>span{
+    width: 128px;
+    height: 4px;
+    background-color: #b2b2b2;
+    opacity: .7;
+    cursor: pointer;
+}
+.swiper-pagination>span:hover{
+    /*background-color: #ff6900;*/
+    opacity: 1;
+}
+
+.content-third{
+    position: relative;
+}
+.content-third .link-box{
+    position: absolute;
+    top: 0;
+    width: 525px;
+    height: 525px;
+    cursor: pointer;
+}
+.content-third .link-box-left{
+    left: 200px;
+}
+.content-third .link-box-right{
+    right: 200px;
+}
+
+.content-fifth{
+    position: relative;
+    overflow: hidden;
+}
+.content-fifth>a:hover{
+    color: #ff6900;
+}
+/*content结束*/
