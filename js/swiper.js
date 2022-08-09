@@ -1,3 +1,4 @@
+/*轮播图*/
 // 声明用于轮播图中改变样式的函数
 function changeStyle(imgBox,left,pointArr,pointIndex){
   imgBox.style.left = left + 'px'
@@ -95,3 +96,36 @@ function swiper(selector,intervalId){
 
 swiper('.content-second','intId1')
 swiper('.content-fifth','intId2')
+
+/*头部透明度、回到顶部按钮*/
+/// 头部透明度变化
+function callBack(){
+  if (html.scrollTop === 0){
+    header.style.backgroundColor = 'rgba(0,0,0,0)'
+    scrollBtn.style.display = 'none'
+  }else {
+    header.style.backgroundColor = 'rgb(0,0,0)'
+    scrollBtn.style.display = 'block'
+  }
+}
+
+let html = document.documentElement
+let body = document.body
+let header = document.querySelector('.header')
+let scrollBtn = document.querySelector('.scroll-btn')
+
+body.onload = callBack
+body.onscroll = callBack
+
+/// 回到顶部
+scrollBtn.onclick = function (){
+  let WIDTH = 100
+  let intervalId = setInterval(()=>{
+    html.scrollTop = html.scrollTop - WIDTH
+    if (html.scrollTop <= 0){
+      html.scrollTop = 0
+      clearInterval(intervalId)
+    }
+  },10)
+
+}
