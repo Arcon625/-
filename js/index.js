@@ -127,5 +127,36 @@ scrollBtn.onclick = function (){
       clearInterval(intervalId)
     }
   },10)
+}
+
+/// 人工服务按钮效果
+let serveLink = document.querySelector('.footer-top-right>a')
+let serveImg = document.querySelector('.footer-top-right img')
+let serveSpan = document.querySelector('.footer-top-right span')
+function changeServeLink(imgUrl,bgColor,fontColor){
+  serveImg.src = imgUrl
+  serveLink.style.backgroundColor = bgColor
+  serveSpan.style.color = fontColor
+}
+
+serveLink.onmouseover = function (){
+  changeServeLink('./images/message_white.svg','#ff6900','#ffffff')
 
 }
+
+serveLink.onmouseout = function (){
+  changeServeLink('./images/message_orange.svg','#ffffff','#ff6900')
+}
+
+/// 底部动态图片效果
+let switchImg = document.querySelector('.switch-img')
+let changeSign = true
+setInterval(() => {
+  if (changeSign){
+    switchImg.src = './images/10013.png'
+    changeSign = !changeSign
+  }else{
+    switchImg.src = './images/10007.png'
+    changeSign = !changeSign
+  }
+},3000)

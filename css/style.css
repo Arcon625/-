@@ -239,9 +239,6 @@
 .footer .footer-top-right a:hover{
     background-color: #ff6900;
 }
-.footer .footer-top-right a:hover>span{
-    color: white;
-}
 .footer .footer-top-right a>img{
     width: 12px;
     height: 12px;
